@@ -1,5 +1,6 @@
 package org.example;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Fallakten {
@@ -8,7 +9,7 @@ public class Fallakten {
     String name;
     String symptom;
     String diagnose;
-    Date date;
+    SimpleDateFormat date;
     String krankenhaus;
 
     public int getId() {
@@ -43,11 +44,11 @@ public class Fallakten {
         this.diagnose = diagnose;
     }
 
-    public Date getDate() {
+    public SimpleDateFormat getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(SimpleDateFormat date) {
         this.date = date;
     }
 
@@ -59,7 +60,7 @@ public class Fallakten {
         this.krankenhaus = krankenhaus;
     }
 
-    public Fallakten(int id, String name, String symptom, String diagnose, Date date, String krankenhaus) {
+    public Fallakten(int id, String name, String symptom, String diagnose, SimpleDateFormat date, String krankenhaus) {
         this.id = id;
         this.name = name;
         this.symptom = symptom;
@@ -67,4 +68,6 @@ public class Fallakten {
         this.date = date;
         this.krankenhaus = krankenhaus;
     }
+
+    public Fallakten() {}
 }
